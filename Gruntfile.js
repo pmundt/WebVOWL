@@ -174,6 +174,4 @@ module.exports = function (grunt) {
 	grunt.registerTask("release", ["pre-js", "webpack:build", "post-js", "htmlbuild:release", "clean:testOntology"]);
 	grunt.registerTask("zip", ["gitinfo", "release", "compress"]);
 	grunt.registerTask("webserver", ["package", "connect:devserver", "watch"]);
-	grunt.registerTask("test", ["karma:dev"]);
-	grunt.registerTask("test-ci", ["karma:continuous"]);
 };
